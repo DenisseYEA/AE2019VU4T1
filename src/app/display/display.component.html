@@ -1,0 +1,26 @@
+<h1>ANIMALS</h1>
+
+<div *ngFor="let post of posts" class="center">
+    <h3> {{ post.name }} </h3>
+    <h4> {{ post.id}} </h4>
+    <p>{{ post.description }}</p>
+    <img src={{post.img}}>
+    <br>
+    <a class="button fancy-button">
+        <p *ngIf="post.rank > 0">
+            <i class="material-icons">star</i>
+        </p>
+        <p *ngIf="post.rank > 1">
+            <i class="material-icons">star</i>
+        </p>
+        <p *ngIf="post.rank > 2">
+            <i class="material-icons">star</i>
+        </p>
+        <p *ngIf="post.rank > 3">
+            <i class="material-icons">star</i>
+        </p>
+        <p *ngIf="post.rank > 4">
+            <i class="material-icons">star</i>
+        </p>
+    </a>
+</div>
